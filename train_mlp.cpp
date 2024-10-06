@@ -61,14 +61,14 @@ int main() {
 
     // dataset
     st::data::MNIST train_dataset(
-        /*img_path=*/"D:\\storehouse\\dataset\\MNIST\\train-images.idx3-ubyte",
-        /*label_path=*/"D:\\storehouse\\dataset\\MNIST\\train-labels.idx1-ubyte",
+        /*img_path=*/"/home/zhuyangyang/project/ML/simple-tensor/dataset/MNIST/raw/train-images-idx3-ubyte",
+        /*label_path=*/"/home/zhuyangyang/project/ML/simple-tensor/dataset/MNIST/raw/train-labels-idx1-ubyte",
         /*batch_size=*/batch_size,
         /*shuffle=*/false
     );
     st::data::MNIST val_dataset(
-        /*img_path=*/"D:\\storehouse\\dataset\\MNIST\\t10k-images.idx3-ubyte",
-        /*label_path=*/"D:\\storehouse\\dataset\\MNIST\\t10k-labels.idx1-ubyte",
+        /*img_path=*/"/home/zhuyangyang/project/ML/simple-tensor/dataset/MNIST/raw/t10k-images-idx3-ubyte",
+        /*label_path=*/"/home/zhuyangyang/project/ML/simple-tensor/dataset/MNIST/raw/t10k-labels-idx1-ubyte",
         /*batch_size=*/batch_size,
         /*shuffle=*/false
     );
