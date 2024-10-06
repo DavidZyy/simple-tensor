@@ -2,10 +2,10 @@
 #include <utility>
 #include <iostream>
 
-#include "tensor/tensor_impl.h"
-#include "tensor/grad_meta.h"
-#include "utils/exception.h"
-#include "utils/allocator.h"
+#include "tensor/tensor_impl.hpp"
+#include "tensor/grad_meta.hpp"
+#include "utils/exception.hpp"
+#include "utils/allocator.hpp"
 
 namespace st {
 

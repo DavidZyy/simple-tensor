@@ -5,17 +5,17 @@
 #include <memory>
 #include <cstring>
 
-#include "utils/allocator.h"
-#include "utils/exception.h"
-#include "exp/exp_impl.h"
-#include "exp/exp.h"
+#include "utils/allocator.hpp"
+#include "utils/exception.hpp"
+#include "exp/exp_impl.hpp"
+#include "exp/exp.hpp"
 
-#include "exp/operator/basic_op.h"
-#include "exp/operator/matrix_op.h"
-#include "exp/operator/reduce_op.h"
-#include "exp/operator/nll_loss.h"
-#include "exp/operator/log_softmax.h"
-#include "exp/operator/conv.h"
+#include "exp/operator/basic_op.hpp"
+#include "exp/operator/matrix_op.hpp"
+#include "exp/operator/reduce_op.hpp"
+#include "exp/operator/nll_loss.hpp"
+#include "exp/operator/log_softmax.hpp"
+#include "exp/operator/conv.hpp"
 
 namespace st {
 

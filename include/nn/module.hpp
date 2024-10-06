@@ -7,7 +7,7 @@
 #include <functional>
 #include <initializer_list>
 
-#include "tensor/tensor.h"
+#include "tensor/tensor.hpp"
 
 namespace st {
 namespace nn {

@@ -4,16 +4,16 @@
 #include <memory>
 #include <initializer_list>
 
-#include "utils/allocator.h"
-#include "utils/base_config.h"
-#include "utils/array.h"
+#include "utils/allocator.hpp"
+#include "utils/base_config.hpp"
+#include "utils/array.hpp"
 
-#include "exp/grad_impl.h"
-#include "exp/operator/log_softmax.h"
-#include "exp/operator/nll_loss.h"
-#include "exp/operator/reduce_op.h"
-#include "exp/operator/conv.h"
-#include "exp/operator/constant.h"
+#include "exp/grad_impl.hpp"
+#include "exp/operator/log_softmax.hpp"
+#include "exp/operator/nll_loss.hpp"
+#include "exp/operator/reduce_op.hpp"
+#include "exp/operator/conv.hpp"
+#include "exp/operator/constant.hpp"
 
 namespace st {
 
@@ -184,7 +184,7 @@ private:
 // 1. ExpImplPtr need be specialized for TensorImpl,
 //    because TensorImpl' version need check before invoking its backward.
 //    But to make the dependency between header files more clear, I put this
-//    specialization in tensor/tensor_impl.h
+//    specialization in tensor/tensor_impl.hpp
 // 2. Some operators need store some states or parameters in UnaryExpImpl,
 //    or BinaryExpImpl.
 namespace st {

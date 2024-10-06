@@ -93,7 +93,7 @@ make train_mlp
 
 ```shell
 # 1. download binary version of cifar10 dataset from
-# 	https://www.cs.toronto.edu/~kriz/cifar.html
+# 	https://www.cs.toronto.edu/~kriz/cifar.hpptml
 # And decompress it.
 
 # 2. change dataset path in train_cnn.cpp

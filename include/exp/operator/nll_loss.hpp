@@ -1,7 +1,9 @@
 #ifndef EXP_OPERATOR_NLL_LOSS_H
 #define EXP_OPERATOR_NLL_LOSS_H
 
-#include "utils/base_config.h"
+#include "utils/base_config.hpp"
+#include "utils/allocator.hpp"
+#include "utils/array.hpp"
 
 namespace st{
 namespace op {

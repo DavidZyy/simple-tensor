@@ -4,7 +4,7 @@
 #include <vector>
 #include <functional>
 
-#include "nn/module.h"
+#include "nn/module.hpp"
 
 namespace st {
 namespace nn{

@@ -3,8 +3,8 @@
 
 #include <type_traits>
 
-#include "utils/base_config.h"
-#include "utils/exception.h"
+#include "utils/base_config.hpp"
+#include "utils/exception.hpp"
 
 namespace st {
 namespace op {

@@ -4,7 +4,9 @@
 #include <algorithm>
 #include <type_traits>
 
-#include "utils/base_config.h"
+#include "utils/base_config.hpp"
+#include "utils/allocator.hpp"
+#include "utils/array.hpp"
 
 
 namespace st {

@@ -5,13 +5,13 @@
 // but have no effect on these in src files.
 #define CANCEL_CHECK
 
-#include "utils/base_config.h"
-#include "utils/allocator.h"
-#include "exp/function.h"
-#include "tensor/tensor.h"
-#include "nn/module.h"
-#include "data/data.h"
-#include "nn/optim.h"
+#include "utils/base_config.hpp"
+#include "utils/allocator.hpp"
+#include "exp/function.hpp"
+#include "tensor/tensor.hpp"
+#include "nn/module.hpp"
+#include "data/data.hpp"
+#include "nn/optim.hpp"
 
 using st::index_t;
 using st::data_t;

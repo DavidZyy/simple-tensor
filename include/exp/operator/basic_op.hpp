@@ -1,9 +1,11 @@
 #ifndef EXP_OPERATOR_BASIC_OP_H
 #define EXP_OPERATOR_BASIC_OP_H
 
+#include <cmath>
+
 #include <type_traits>
 
-#include "utils/base_config.h"
+#include "utils/base_config.hpp"
 
 namespace st {
 namespace op {

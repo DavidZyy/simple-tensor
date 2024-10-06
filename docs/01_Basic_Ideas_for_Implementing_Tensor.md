@@ -259,7 +259,7 @@ Tensor slice(const Tensor& t, int start_idx, int end_idx, int dim) {
 
 ##### 2.6 Broadcasting
 
-广播机制也是Tensor运算的一大特色，可以使不具有相同形状的Tensor进行加减乘除运算。下面是[Pytorch官网的例子](https://pytorch.org/docs/stable/notes/broadcasting.html?highlight=broadcasting)：
+广播机制也是Tensor运算的一大特色，可以使不具有相同形状的Tensor进行加减乘除运算。下面是[Pytorch官网的例子](https://pytorch.org/docs/stable/notes/broadcasting.hpptml?highlight=broadcasting)：
 
 ```python
 # python code
@@ -331,4 +331,4 @@ t2[i, j, k] == t0[i, j, k] + t1[i, j, k]
 
 #### 3. My Implement
 
-在Simple-Tensor中，这部分对应的实现位于[include/tensor_impl.h](https://github.com/XuHQ1997/simple-tensor/blob/main/include/tensor/tensor_impl.h)和[src/tensor_impl.cpp](https://github.com/XuHQ1997/simple-tensor/blob/main/src/tensor/tensor_impl.cpp)中。因为用`Storage`封装了`Tensor::data`和`Tensor::offset`，用`Shape`封装了`Tensor::shape`，用`IndexArray`封装了`Tensor::stride`，并且进行了参数检查，所以代码稍有不同，但原理大致相同。
+在Simple-Tensor中，这部分对应的实现位于[include/tensor_impl.hpp](https://github.com/XuHQ1997/simple-tensor/blob/main/include/tensor/tensor_impl.hpp)和[src/tensor_impl.cpp](https://github.com/XuHQ1997/simple-tensor/blob/main/src/tensor/tensor_impl.cpp)中。因为用`Storage`封装了`Tensor::data`和`Tensor::offset`，用`Shape`封装了`Tensor::shape`，用`IndexArray`封装了`Tensor::stride`，并且进行了参数检查，所以代码稍有不同，但原理大致相同。

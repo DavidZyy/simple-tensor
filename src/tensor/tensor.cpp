@@ -1,7 +1,7 @@
-#include "tensor/tensor.h"
-#include "tensor/shape.h"
-#include "exp/operator/constant.h"
-#include "exp/grad_impl.h"
+#include "tensor/tensor.hpp"
+#include "tensor/shape.hpp"
+#include "exp/operator/constant.hpp"
+#include "exp/grad_impl.hpp"
 
 namespace st {
 

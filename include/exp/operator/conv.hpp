@@ -6,7 +6,9 @@
 #include <iostream>
 #include <type_traits>
 
-#include "utils/base_config.h"
+#include "utils/base_config.hpp"
+#include "utils/array.hpp"
+#include "utils/exception.hpp"
 
 namespace st {
 namespace op {

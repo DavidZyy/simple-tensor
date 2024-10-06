@@ -3,15 +3,15 @@
 
 #include <type_traits>
 
-#include "utils/base_config.h"
-#include "utils/array.h"
-#include "utils/exception.h"
+#include "utils/base_config.hpp"
+#include "utils/array.hpp"
+#include "utils/exception.hpp"
 
-#include "exp/operator/log_softmax.h"
-#include "exp/operator/constant.h"
-#include "exp/operator/reduce_op.h"
-#include "exp/operator/nll_loss.h"
-#include "exp/operator/conv.h"
+#include "exp/operator/log_softmax.hpp"
+#include "exp/operator/constant.hpp"
+#include "exp/operator/reduce_op.hpp"
+#include "exp/operator/nll_loss.hpp"
+#include "exp/operator/conv.hpp"
 
 namespace st {
 // GradImpl is the template expression used in backward

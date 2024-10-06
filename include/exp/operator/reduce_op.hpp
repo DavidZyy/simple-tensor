@@ -3,8 +3,10 @@
 
 #include <algorithm>
 
-#include "utils/base_config.h"
-#include "utils/exception.h"
+#include "utils/base_config.hpp"
+#include "utils/exception.hpp"
+#include "utils/allocator.hpp"
+#include "utils/array.hpp"
 
 namespace st {
 namespace op {

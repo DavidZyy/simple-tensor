@@ -1,4 +1,4 @@
-#include "tensor/shape.h"
+#include "tensor/shape.hpp"
 
 namespace st {
 

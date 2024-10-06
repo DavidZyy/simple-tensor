@@ -4,9 +4,9 @@
 #include <memory>
 #include <initializer_list>
 
-#include "exp/exp.h"
-#include "exp/exp_impl.h"
-#include "tensor/tensor_impl.h"
+#include "exp/exp.hpp"
+#include "exp/exp_impl.hpp"
+#include "tensor/tensor_impl.hpp"
 
 
 namespace st {
@@ -15,7 +15,7 @@ template class Exp<TensorImpl>;
 template class ExpImplPtr<TensorImpl>;
 
 
-// Shell of TensorImpl. See exp/exp.h for more information.
+// Shell of TensorImpl. See exp/exp.hpp for more information.
 class Tensor : public Exp<TensorImpl> {
 public:
     Tensor(const Storage& storage, const Shape& shape, const IndexArray& stride,

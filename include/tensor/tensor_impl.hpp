@@ -2,12 +2,12 @@
 #define TENSOR_TENSOR_IMPL_H
 
 #include <initializer_list>
-#include <utility>
+// #include <utility>
 
-#include "exp/exp_impl.h"
-#include "tensor/storage.h"
-#include "tensor/shape.h"
-#include "utils/exception.h"
+#include "exp/exp_impl.hpp"
+#include "tensor/storage.hpp"
+#include "tensor/shape.hpp"
+#include "utils/exception.hpp"
 
 
 namespace st {
@@ -165,9 +165,73 @@ private:
     Alloc::nontrivial_delete_handler<TensorImpl> delete_handler;
 };
 }  // namespace st
-#include "tensor/grad_meta.h"
+#include "tensor/grad_meta.hpp"
 
 namespace st {
+
+template<typename ImplType> 
+class __GradFn: public GradFn {
+public:
+    __GradFn(const ImplType& impl) : next_exp_(impl, false) {}
+    ~__GradFn() = default;
+
+    void operator()(void) override { 
+        THROW_ERROR("Need grad when invoke backward method of a expression.");
+    }
+
+    void operator()(const Storage& grad, const Shape& shape, 
+                    const IndexArray& stride) override {
+        TensorGradImpl grad_exp_impl(grad, shape, stride);
+        next_exp_.invoke_backward(grad_exp_impl);
+    }
+private:
+    ExpImplPtr<ImplType> next_exp_;
+};
+
+template<>
+struct __GradFn<TensorImpl>: public GradFn {
+public:
+    __GradFn(const TensorImpl& impl) : next_exp_(impl, false) {}
+    ~__GradFn() = default;
+
+    void operator()(void) override {
+        next_exp_.invoke_backward();
+    }
+
+    void operator()(const Storage& grad, const Shape& shape,
+                    const IndexArray& stride) override {
+        TensorGradImpl grad_exp_impl(grad, shape, stride);
+        next_exp_.invoke_backward(grad_exp_impl);
+    }
+private:
+    ExpImplPtr<TensorImpl> next_exp_;
+};
+
+
+struct AutoGradMeta {
+
+    Storage grad_;
+    bool from_view_;
+    std::shared_ptr<GradFn> grad_fn_ptr_;
+
+    AutoGradMeta(const Shape& tensor_shape)
+            : grad_(tensor_shape.dsize(), 0),
+              from_view_(false),
+              grad_fn_ptr_(nullptr) {}
+    
+    AutoGradMeta(const Storage& grad, index_t offset)
+            : grad_(grad, offset),
+              from_view_(false),
+              grad_fn_ptr_(nullptr) {}
+
+    void set_from_view(bool from_view) { from_view_ = from_view; }
+
+    template<typename ImplType>
+    void set_grad_fn(const ImplType& impl) {
+        auto ptr = Alloc::shared_construct<__GradFn<ImplType>>(impl);
+        grad_fn_ptr_ = ptr;
+    }
+};
 
 template<typename ImplType> 
 void __assign(Storage& dist_storage, const Shape& dist_shape, 
@@ -234,7 +298,7 @@ inline TensorImpl& TensorImpl::operator=(const TensorImpl& other) {
         storage_.increment_version();
     }
 
-      if(is_contiguous())
+    if(is_contiguous())
         __assign(storage_, shape_, stride_, other);
     else
         __assign_uncontiguous(storage_, shape_, stride_, other);

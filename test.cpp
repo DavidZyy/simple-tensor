@@ -8,17 +8,17 @@
 #include <iostream>
 #include <chrono>
 
-#include "utils/base_config.h"
-#include "utils/array.h"
-#include "utils/exception.h" // CHECK_XXX is defined in utils/exception.h
-#include "exp/function.h"
-#include "tensor/shape.h"
-#include "tensor/storage.h"
-#include "tensor/tensor_impl.h"
-#include "tensor/tensor.h"
-#include "nn/init.h"
-#include "nn/module.h"
-#include "nn/optim.h"
+#include "utils/base_config.hpp"
+#include "utils/array.hpp"
+#include "utils/exception.hpp" // CHECK_XXX is defined in utils/exception.hpp
+#include "exp/function.hpp"
+#include "tensor/shape.hpp"
+#include "tensor/storage.hpp"
+#include "tensor/tensor_impl.hpp"
+#include "tensor/tensor.hpp"
+#include "nn/init.hpp"
+#include "nn/module.hpp"
+#include "nn/optim.hpp"
 
 
 using std::cout;

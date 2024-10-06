@@ -1,9 +1,9 @@
 #include <cstring>
 
-#include "tensor/storage.h"
-#include "tensor/tensor.h"
-#include "tensor/tensor_impl.h"
-#include "nn/optim.h"
+#include "tensor/storage.hpp"
+#include "tensor/tensor.hpp"
+#include "tensor/tensor_impl.hpp"
+#include "nn/optim.hpp"
 
 namespace st {
 namespace nn {

@@ -1,8 +1,8 @@
 #include <cmath>
 
-#include "exp/function.h"
-#include "nn/module.h"
-#include "nn/init.h"
+#include "exp/function.hpp"
+#include "nn/module.hpp"
+#include "nn/init.hpp"
 
 namespace st {
 namespace nn {

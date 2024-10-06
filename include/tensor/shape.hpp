@@ -4,9 +4,9 @@
 #include <initializer_list>
 #include <ostream>
 
-#include "utils/base_config.h"
-#include "utils/allocator.h"
-#include "utils/array.h"
+#include "utils/base_config.hpp"
+#include "utils/allocator.hpp"
+#include "utils/array.hpp"
 
 namespace st {
 

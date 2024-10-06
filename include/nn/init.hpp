@@ -4,9 +4,9 @@
 #include <random>
 #include <string>
 
-#include "utils/exception.h"
-#include "tensor/tensor.h"
-#include "tensor/tensor_impl.h"
+#include "utils/exception.hpp"
+#include "tensor/tensor.hpp"
+#include "tensor/tensor_impl.hpp"
 
 namespace st {
 namespace nn {

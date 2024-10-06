@@ -6,8 +6,8 @@
 #include <cstring>
 #include <iostream>
 
-#include "utils/base_config.h"
-#include "utils/allocator.h"
+#include "utils/base_config.hpp"
+#include "utils/allocator.hpp"
 
 namespace st {
 

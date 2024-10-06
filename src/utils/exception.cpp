@@ -1,7 +1,7 @@
 #include <sstream>
 #include <cstring>
 
-#include "utils/exception.h"
+#include "utils/exception.hpp"
 
 namespace st {
 namespace err {

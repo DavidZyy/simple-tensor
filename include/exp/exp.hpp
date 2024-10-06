@@ -1,8 +1,8 @@
 #ifndef EXP_EXP_H
 #define EXP_EXP_H
 
-#include "exp/exp_impl.h"
-#include "exp/operator/basic_op.h"
+#include "exp/exp_impl.hpp"
+#include "exp/operator/basic_op.hpp"
 
 namespace st {
 /*

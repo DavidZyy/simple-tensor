@@ -1,6 +1,6 @@
 #include <cstring>
 
-#include "tensor/storage.h"
+#include "tensor/storage.hpp"
 
 namespace st {
 

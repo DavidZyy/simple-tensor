@@ -1,7 +1,7 @@
 #include <chrono>
 #include <cmath>
 
-#include "nn/init.h"
+#include "nn/init.hpp"
 
 
 namespace st {
